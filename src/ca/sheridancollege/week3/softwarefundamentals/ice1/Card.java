@@ -14,13 +14,17 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * add your name as a modifier.
  *
  * @author Megha Patel
+ * @modifier Zhao Wang
  */
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
-
+   
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+
+//   public static final String [][] DECK = {{"Hearts", "Diamonds", "Spades", "Clubs"},
+//       {"2", "3", "4", "5", "6", "7", "8", "9", "10","Jack", "Queen", "King", "Ace"}};
     /**
      * @return the suit
      */
@@ -32,7 +36,7 @@ public class Card {
      * @param suit the suit to set
      */
     public void setSuit(String suit) {
-        this.suit = suit;
+        this.suit = suit; 
     }
 
     /**
@@ -48,5 +52,14 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-
+    
+    public int getRandomValue(){
+        int ran = (int)(Math.random() * 13)+1;
+        return ran;
+    }
+    
+    public int getRandomSuit(){
+        int ran =(int)(Math.random() * 3)+0;
+        return ran;
+    }
 }
